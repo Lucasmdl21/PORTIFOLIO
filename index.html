@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="Estilo/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <title>Portifolio Lucas MDl</title>
 </head>
 <body>
@@ -28,8 +32,9 @@
     <section class="home container_principal" id="Home">
         <div class="home-content">
             <h3>Hello, My name is</h3>
-            <h1>Lucas Maia</h1>
-            <h3>E sou <span>Front-end Developer</span></h3>
+            <h1 class="tracking-in-expand">Lucas Maia</h1>
+            <h3>E sou <span class="typing-text"></span></h3>
+
             <p>Seja muito bem vindo ao meu portifolio</p>
 
             <div class="social-media">
@@ -46,11 +51,11 @@
         <div class="about_content">
 
            <div class="about_img">
-                <img src="Imagens/correct-Photoroom.png" alt="">
+                <img src="Imagens/correct-Photoroom.png" alt="" data-aos="fade-left">
             </div>
 
-            <div class="about_text">
-                <h1><span>Abo</span>ut</h1>
+            <div class="about_text" data-aos="fade-right">
+                <h1 data-aos="flip-right"><span>Abo</span>ut</h1>
                 <p>Olá! Sou o Lucas, uma pessoa criativa, curiosa e apaixonada por transformar ideias em realidade.
 Gosto de unir arte, tecnologia e imaginação, explorando o design, a programação e a criação de histórias que transmitam significado.
 
@@ -60,8 +65,8 @@ Busco sempre evoluir, descobrir novas ferramentas e aprimorar minhas habilidades
 Meu objetivo é criar coisas que inspirem, conectem pessoas e deixem uma marca positiva no mundo.</p>
             </div>
 
-            <div class="about_text_mobile">
-                <h1><span>Abo</span>ut</h1>
+            <div class="about_text_mobile" data-aos="fade-right">
+                <h1 data-aos="flip-right"><span>Abo</span>ut</h1>
                 <p>Olá! Sou o Lucas, criativo e apaixonado por transformar ideias em realidade.
 Gosto de unir arte e tecnologia, explorando design, programação e criação de histórias.
 Cada projeto é uma oportunidade de aprender, evoluir e inspirar outras pessoas.</p>
@@ -71,9 +76,9 @@ Cada projeto é uma oportunidade de aprender, evoluir e inspirar outras pessoas.
     </section>
 
     <section class="services container_segundario" id="services">
-                <h1 class="title">Serv<span>ices</span></h1>
+                <h1 class="title" data-aos="flip-right">Serv<span>ices</span></h1>
       
-            <div class="container-card">
+            <div class="container-card" data-aos="fade-up-left">
                 <div class="card">
 
                     <div class="icons-card">
@@ -111,9 +116,9 @@ Cada projeto é uma oportunidade de aprender, evoluir e inspirar outras pessoas.
     </section>
 
     <section class="Projetos container_segundario" id="portifolio">
-                <h1 class="title"><span>Pro</span>jetos</h1>
+                <h1 class="title" data-aos="flip-right"><span>Pro</span>jetos</h1>
       
-            <div class="container-ptojeto">
+            <div class="container-ptojeto" data-aos="zoom-in-up">
                 <div class="card">
                     <img class="fts-projetos" src="Imagens/carros.png" alt="">
                 
@@ -141,10 +146,10 @@ Cada projeto é uma oportunidade de aprender, evoluir e inspirar outras pessoas.
     </section>
 
     <section class="contact container_segundario" id="contact">
-        <h1 class="title">
+        <h1 class="title" data-aos="flip-right">
             Cont<span>act</span>
         </h1>
-<div class="container_inputs">
+<div class="container_inputs" data-aos="zoom-in-left">
     
             <div class="input_nome input__conjunto">
                 <input placeholder="Digite seu nome" type="text">
@@ -167,68 +172,103 @@ Cada projeto é uma oportunidade de aprender, evoluir e inspirar outras pessoas.
     </section>
 
     <footer>Made in Lucas</footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
 
+const menuIcon = document.querySelector('#menu-icon');
+const navbar = document.querySelector('.navbar');
+const navLinks = document.querySelectorAll('.navbar a');
+const sections = document.querySelectorAll('section');
 
-   const menuIcon = document.querySelector('#menu-icon');
-    const navbar = document.querySelector('.navbar');
-    const navLinks = document.querySelectorAll('.navbar a');
-    const sections = document.querySelectorAll('section');
+// Toggle menu (abre/fecha)
+menuIcon.onclick = () => {
+    navbar.classList.toggle('active');
+    menuIcon.classList.toggle('bx-x');
+};
 
-    // Toggle menu (abre/fecha)
-    menuIcon.onclick = () => {
-        navbar.classList.toggle('active');
-        menuIcon.classList.toggle('bx-x');
-    };
-
-    // Fecha o menu quando clicar em um link (mobile)
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            navbar.classList.remove('active');
-            menuIcon.classList.remove('bx-x');
-        });
+// Fecha o menu quando clicar em um link (mobile)
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navbar.classList.remove('active');
+        menuIcon.classList.remove('bx-x');
     });
+});
 
-    // Ativa link conforme a seção visível
-    window.addEventListener('scroll', () => {
-        let scrollY = window.scrollY;
+// Ativa link conforme a seção visível
+window.addEventListener('scroll', () => {
+    let scrollY = window.scrollY;
 
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 150;
-            const sectionHeight = section.offsetHeight;
-            const sectionId = section.getAttribute('id');
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 150;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
 
-            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    document
-                        .querySelector('.navbar a[href*=' + sectionId + ']')
-                        .classList.add('active');
-                });
-            }
-        });
-    });
-
-    // Rolagem suave ao clicar nos links
-    navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href');
-            document.querySelector(targetId).scrollIntoView({
-                behavior: 'smooth'
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                document
+                    .querySelector('.navbar a[href*=' + sectionId + ']')
+                    .classList.add('active');
             });
+        }
+    });
+});
+
+// Rolagem suave
+navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        document.querySelector(targetId).scrollIntoView({
+            behavior: 'smooth'
         });
     });
+});
 
-    
-   menuIcon = document.querySelector('#menu-icon');
-    navbar = document.querySelector('.navbar');
+// Efeito de digitação
+const typedTextSpan = document.querySelector(".typing-text");
+const textArray = ["Front-end Developer", "Designer", "Criador de Histórias"];
+const typingDelay = 100;
+const erasingDelay = 50;
+const newTextDelay = 1000;
+let textArrayIndex = 0;
+let charIndex = 0;
 
-    menuIcon.onclick = () => {
-        navbar.classList.toggle('active');
-        menuIcon.classList.toggle('bx-x');
-    };
+function type() {
+  if (charIndex < textArray[textArrayIndex].length) {
+    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingDelay);
+  } else {
+    setTimeout(erase, newTextDelay);
+  }
+}
+
+function erase() {
+  if (charIndex > 0) {
+    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(erase, erasingDelay);
+  } else {
+    textArrayIndex++;
+    if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+    setTimeout(type, typingDelay + 500);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (textArray.length) setTimeout(type, newTextDelay + 250);
+});
+
+
+
+ AOS.init();
 </script>
+
+
+
 
 </body>
 </html>

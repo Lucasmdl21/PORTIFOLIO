@@ -8,11 +8,14 @@
             scroll-behavior: smooth;
         }
         :root{
-            --primeira-cor: #2a2929;
-            --segunda-cor: #323946;
-            --text-cor: #fff;
+            --primeira-cor: #0D0D0D;
+
+            --text-cor: #BAC2D9;
             --decoration-cor: #0ef;
         }
+html, body {
+    height: 100%;
+}
 
         html{
             font-size: 62.5%;
@@ -24,11 +27,16 @@
             color: var(--text-cor);
         }
 
-        .container_principal{
-            min-height: 100vh;
-            background-color: rgb(0, 5, 11);
-        
-        }
+
+
+.container_principal {
+    min-height: 100vh; 
+    background-color: rgb(3, 5, 9);
+}
+
+
+
+
     .container_segundario {
         width: 100%;
         margin: 0 auto;
@@ -188,6 +196,9 @@
             box-shadow: none;
         }
 
+
+        
+
         /* TABLETS GRANDES 1024PX ====RESPONSIVE OK====*/ 
 
 
@@ -338,7 +349,7 @@
         }
 /* =================== SERVICES SECTION =================== */
         .services{
-            background-color: rgb(0, 5, 11);
+            background-color: rgb(3, 5, 9);
         }
     .title{
         font-size: 7rem;
@@ -465,7 +476,7 @@
 }
 
 .container-ptojeto .card {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(3, 5, 9);
     border-radius: 1rem;
     width: 100%;
     box-sizing: border-box;
@@ -573,7 +584,7 @@
 }
 /* ====================contact================ */
 .contact{
-    background-color:  rgb(0, 5, 11) ;
+    background-color: rgb(3, 5, 9);
 }
 .container_inputs {
     display: flex;
