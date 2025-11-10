@@ -512,6 +512,87 @@ span {
   border-color: #00f7ff;
   box-shadow: 0 0 10px var(--decoration-cor);
 }
+
+/* ======== RESPONSIVIDADE PARA MODO PAISAGEM ======== */
+@media (max-width: 900px) and (orientation: landscape) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 1rem 5%;
+  }
+
+  .home {
+    flex-direction: column;
+    text-align: center;
+    padding: 9rem 2rem;
+  }
+
+  .home-content h1 {
+    font-size: 6rem;
+  }
+
+  .home-content p {
+    font-size: 1.6rem;
+    width: 80%;
+  }
+
+  /* ======= ABOUT ajustado ======= */
+  .about_content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: left;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .about_content .about_img {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about_content .about_img img {
+    width: 100%;
+    max-width: 350px; /* garante tamanho equilibrado */
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 15px var(--decoration-cor));
+  }
+
+  .about_content .about_text_mobile,
+  .about_content .about_text {
+    flex: 1 1 50%;
+  }
+
+  .about_content .about_text_mobile p,
+  .about_content .about_text p {
+    width: 100%;
+    font-size: 1.8rem;
+    text-align: justify;
+    line-height: 1.4;
+  }
+
+  /* ======= Services e Projetos ======= */
+  .services .container-card,
+  .container-ptojeto {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+  }
+
+  .contact .container_inputs {
+    width: 85%;
+  }
+
+  footer {
+    font-size: 1.6rem;
+    padding: 1.5rem;
+  }
+}
+
+
 footer {
   background-color: black;
   color: white;
