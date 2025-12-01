@@ -1,10 +1,7 @@
-let headerButton = document.querySelector('.header_nav_button');
+const button = document.querySelector('.header_nav_button');
+const mobileLinks = document.querySelector('.header_nav_links_mobile');
 
-let headerLinks = document.querySelector('.header_nav_links_mobile');
-
-function toggleMenu() {
-    headerLinks.classList.toggle('active');
-    headerButton.classList.toggle('open');
-}
-
-headerButton.addEventListener('click', toggleMenu);
+button.addEventListener('click', () => {
+    button.classList.toggle('open');
+    mobileLinks.classList.toggle('active');
+});
