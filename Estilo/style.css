@@ -17,6 +17,7 @@
   --decoration-cor2: #FFAE00;
 
 
+  --tamanho_20PX: 20px;
   --tamanho_24PX: 24px;
   --tamanho_80PX: 80px;
 }
@@ -27,20 +28,36 @@ section{
   padding: 0 9%;
 }
 a{
-  display: block;
+  display: inline-block;
   font-size: var(--tamanho_24PX);
   color: var(--text-cor);
   font-weight: 700;
   font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
   font-style: normal;
 }
 .title{
   font-size: var(--tamanho_80PX);
   color: var(--text-cor);
-  font-weight: 100;
+  font-weight: 400;
   font-family: "Italiana", sans-serif;
 }  
+
+.btn {
+  display: inline-flex;     /* botão não estica */
+  justify-content: center;
+  align-items: center;
+  background-color: var(--decoration-cor);
+  padding: 2% 10%;
+  border-radius: 50px;
+  font-size: var(--tamanho_20PX);
+  font-weight: 700;
+  cursor: pointer;
+
+  width: fit-content;
+}
+
+
+
 .header{
   background-color: var(--primeira-cor);
   padding: 2rem;
@@ -193,4 +210,29 @@ a{
   align-items: center;
 
   min-height: calc(100vh - 120px);
+}
+.hero_section .hero_section_content{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.paragrafo_hero{
+  color: var(--text-cor);
+  font-size: var(--tamanho_24PX);
+  letter-spacing: 3px;
+}
+.hero_section_icons{
+  display: flex;
+  gap: 1rem;
+}
+.hero_section_icons .hero_icons{
+  background-color: var(--decoration-cor);
+  border-radius: 20px;
+  padding: .2rem;
+  transition: linear .2s;
+  transform: scale(1);
+}
+.hero_section_icons .hero_icons:hover{
+  box-shadow: 0px 0px 15px var(--decoration-cor);
+  transform: scale(1.1);
 }
