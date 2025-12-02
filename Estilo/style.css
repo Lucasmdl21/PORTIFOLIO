@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Gilda+Display&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italiana&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +18,13 @@
 
 
   --tamanho_24PX: 24px;
+  --tamanho_80PX: 80px;
+}
+body{
+  background-color: var(--primeira-cor);
+}
+section{
+  padding: 0 9%;
 }
 a{
   display: block;
@@ -27,12 +35,18 @@ a{
   font-optical-sizing: auto;
   font-style: normal;
 }
-
+.title{
+  font-size: var(--tamanho_80PX);
+  color: var(--text-cor);
+  font-weight: 100;
+  font-family: "Italiana", sans-serif;
+}  
 .header{
   background-color: var(--primeira-cor);
   padding: 2rem;
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6); 
 }
 
 .header .header_nav{
@@ -146,7 +160,6 @@ a{
     box-shadow: 0 12px 25px rgba(0,0,0,0.45);
   }
 
-  /* Links do menu com efeito */
   .header_nav_links_mobile a {
     padding: 10px 18px;
     border-radius: 12px;
@@ -157,14 +170,12 @@ a{
     background-color: var(--decoration-cor);
   }
 
-  /* Menu quando abre */
   .header_nav_links_mobile.active {
     transform: translateY(0);
     opacity: 1;
     pointer-events: auto;
   }
 
-  /* Animação moderna do hambúrguer */
   .header_nav_button.open span:nth-child(1) {
     transform: translateY(11px) rotate(45deg);
   }
@@ -174,4 +185,12 @@ a{
   .header_nav_button.open span:nth-child(3) {
     transform: translateY(-11px) rotate(-45deg);
   }
+}
+
+.hero_section{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  min-height: calc(100vh - 120px);
 }
