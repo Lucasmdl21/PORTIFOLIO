@@ -209,7 +209,7 @@ a{
   justify-content: space-around;
   align-items: center;
 
-  min-height: calc(100vh - 120px);
+  min-height: calc(100vh - 140px);
 }
 .hero_section .hero_section_content{
   display: flex;
