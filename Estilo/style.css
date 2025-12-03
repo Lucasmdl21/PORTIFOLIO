@@ -218,6 +218,7 @@ a{
 }
 .paragrafo_hero{
   color: var(--text-cor);
+  font-family: "Inter", sans-serif;
   font-size: var(--tamanho_24PX);
   letter-spacing: 3px;
 }
@@ -253,5 +254,9 @@ a{
   @media (max-width: 600px) {
      .hero_section .hero_section_content{
       align-items: normal;
+      gap: .7rem;
+ }
+ .paragrafo_hero{
+  font-size: 16px;
  }
   }
