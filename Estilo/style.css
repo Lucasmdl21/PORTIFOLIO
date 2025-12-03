@@ -60,7 +60,7 @@ a{
 
 .header{
   background-color: var(--primeira-cor);
-  padding: 2rem;
+  padding: clamp(12px, 3vw, 24px);
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.6); 
@@ -140,7 +140,7 @@ a{
   }
 
   .header_nav_button {
-    width: 44px;
+    width: clamp(32px, 8vw, 44px);
     height: 35px;
     display: flex;
     flex-direction: column;
