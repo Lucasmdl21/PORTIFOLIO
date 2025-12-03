@@ -140,7 +140,7 @@ a{
   }
 
   .header_nav_button {
-    width: clamp(32px, 8vw, 44px);
+    width: 44px;
     height: 35px;
     display: flex;
     flex-direction: column;
@@ -159,7 +159,7 @@ a{
 
   .header_nav_links_mobile {
     position: absolute;
-    top: 100%;
+    top: 80px;
     left: 0;
     width: 100%;
     background-color: var(--primeira-cor);
