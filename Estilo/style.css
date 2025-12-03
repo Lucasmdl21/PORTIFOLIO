@@ -70,7 +70,7 @@ a{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 9%;
+  padding: 0 clamp(12px, 5vw, 32px);
 }
 
 .header .header_nav .header_nav_links{
@@ -159,7 +159,7 @@ a{
 
   .header_nav_links_mobile {
     position: absolute;
-    top: 80px;
+    top: 100%;
     left: 0;
     width: 100%;
     background-color: var(--primeira-cor);
@@ -168,7 +168,7 @@ a{
     flex-direction: column;
     gap: 16px;
     align-items: center;
-    transform: translateY(-350px);
+    transform: translateY(-100%);
     opacity: 0;
     pointer-events: none;
     transition: 0.45s ease;
