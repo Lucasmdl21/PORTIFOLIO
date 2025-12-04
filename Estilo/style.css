@@ -20,6 +20,7 @@
   --tamanho_20PX: 20px;
   --tamanho_24PX: 24px;
   --tamanho_28PX: 28px;
+  --tamanho_50PX: 50px;
   --tamanho_80PX: 80px;
 }
 body{
@@ -29,7 +30,8 @@ section{
     padding: 0 clamp(16px, 5vw, 40px);
 }
 .section_global{
-    padding: 0 clamp(16px, 5vw, 40px);
+    padding: 0 9%;
+    padding-top: 12rem;
 }
 a{
   display: inline-block;
@@ -220,7 +222,7 @@ a{
   justify-content: space-around;
   align-items: center;
 
-  min-height: 100dvh;
+  min-height: 100vh;
 }
 .hero_section .hero_section_content{
   display: flex;
@@ -277,6 +279,7 @@ a{
   .about_me_section{
     display: flex;
     justify-content: space-around;
+    padding-top: 10rem;
   }
 
   .about_me_section {
@@ -333,5 +336,61 @@ a{
 
   .about_me_content .about_title, .about_me_paragrafo{
     text-align: left;
+  }
+}
+
+/* ---------------------------------------- */
+  .service_title{ text-align: center; margin-bottom: 4rem; }
+
+.services_cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+  align-items: stretch; 
+}
+
+.service_card {
+  text-align: center;
+  border: 4px solid var(--decoration-cor);
+  border-radius: 40px;
+  padding: 2.5rem 1.8rem;
+  color: var(--text-cor);
+  background-color: rgb(16, 15, 15);
+
+  width: 100%;
+  height: 100%;  
+
+  transform: scale(1);
+  transition: .3s linear;
+}
+.service_card:hover {
+  transform: scale(1.0309);
+  box-shadow: 8px 0px 20px 1px var(--decoration-cor2);
+}
+
+.service_card .titulo_card_service {
+  font-size: var(--tamanho_50PX);
+  padding-bottom: 1rem;
+}
+
+.service_card .paragrafo_card_service {
+  font-size: var(--tamanho_24PX);
+  line-height: 1.4;
+}
+
+@media (max-width: 500px) {
+  .service_card {
+    padding: 2rem 1.4rem;
+    max-width: 300px;
+  }
+
+  .service_card .titulo_card_service {
+    font-size: var(--tamanho_28PX);
+  }
+
+  .service_card .paragrafo_card_service {
+    font-size: 16px;
   }
 }
