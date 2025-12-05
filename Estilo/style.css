@@ -49,7 +49,7 @@ a{
 }  
 
 .btn {
-  display: inline-flex;     /* botão não estica */
+  display: inline-flex;     
   justify-content: center;
   align-items: center;
   background-color: var(--decoration-cor);
@@ -392,5 +392,117 @@ a{
 
   .service_card .paragrafo_card_service {
     font-size: 16px;
+  }
+}
+
+
+/* ------------------------------------------- */
+
+.project_title{
+  text-align: center;
+  padding-bottom: 5rem;
+}
+.projects_cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.project_card {
+    width: 450px;
+    background: #fff;
+    border-radius: 35px;
+    border: 3px solid #c9932d;
+    overflow: hidden;
+    padding-bottom: 25px;
+    box-sizing: border-box;
+}
+
+.project_img {
+    height: 220px;
+    background: #c9932d;
+    border-bottom-left-radius: 90px;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.project_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.project_content {
+    padding: 25px;
+}
+
+.project_content h2 {
+    font-size: 3rem;
+    margin-bottom: 5px;
+    font-family: "Gilda Display", serif;
+}
+
+.project_content p {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.project_content .btn {
+    display: inline-block;
+    padding: 1rem;
+    margin-bottom: 20px;
+}
+
+.project_linguagens {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.linguagens {
+    border: 2px solid #c9932d;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+
+@media (max-width: 600px){
+  .project_card {
+      width: 100%;
+      max-width: 330px;      
+      border-radius: 28px;
+      padding-bottom: 15px;
+  }
+
+  .project_img {
+      height: 150px;           /* reduz altura */
+  }
+  .project_content {
+      padding: 15px;           /* menos espaço interno */
+  }
+
+  .project_content h2{
+    font-size: 2rem;
+  }
+  .project_content p{
+    font-size: 1.4rem;
+  }
+  .project_linguagens{
+    gap: 3px;
+  }
+
+    .project_content .btn {
+      padding: 0.6rem 1rem;    /* botão menor */
+      font-size: 0.9rem;
+      margin-bottom: 12px;
   }
 }
