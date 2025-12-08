@@ -13,8 +13,8 @@
 :root {
   --primeira-cor: #0B0B0B;
   --text-cor: #FFFFFF;
-  --decoration-cor: #CE9428;
-  --decoration-cor2: #FFAE00;
+  --decoration-cor2: #4786d2;
+  --decoration-cor: #113a77;
 
 
   --tamanho_20PX: 20px;
@@ -42,6 +42,12 @@ a{
   font-style: normal;
 }
 .title{
+  font-size: 140px;
+  color: var(--text-cor);
+  font-weight: 400;
+  font-family: "Italiana", sans-serif;
+}  
+.title2{
   font-size: var(--tamanho_80PX);
   color: var(--text-cor);
   font-weight: 400;
@@ -49,11 +55,10 @@ a{
 }  
 
 .btn {
-  display: inline-flex;     
-  justify-content: center;
-  align-items: center;
+  margin-top: 1rem;
+  display: block;     
   background-color: var(--decoration-cor);
-  padding: 2% 10%;
+  padding: 1rem 2rem;
   border-radius: 50px;
   font-size: var(--tamanho_20PX);
   font-weight: 700;
@@ -64,6 +69,10 @@ a{
 
 
 
+
+span{
+  color: var(--decoration-cor2);
+}
 .header{
   position: fixed;
   top: 0;
@@ -216,6 +225,13 @@ a{
     transform: translateY(-11px) rotate(-45deg);
   }
 }
+
+@media (max-width: 960px){
+   .title{
+    font-size: 100px;
+  }
+
+}
 /* -------------------------------- */
 .hero_section{
   display: flex;
@@ -241,10 +257,13 @@ a{
 }
 .hero_section_icons .hero_icons{
   background-color: var(--decoration-cor);
-  border-radius: 20px;
+  border-radius: 10px;
   padding: .2rem;
   transition: linear .2s;
   transform: scale(1);
+
+  width: 60px;
+  height: 60px;
 }
 .hero_section_icons .hero_icons:hover{
   box-shadow: 0px 0px 15px var(--decoration-cor);
@@ -260,7 +279,6 @@ a{
   }
  .hero_section .hero_section_content{
   align-items: center;
-
  }
 }
 
@@ -273,6 +291,10 @@ a{
   font-size: 16px;
  }
   }
+ .hero_section_icons .hero_icons{
+  width: 55px;
+  height: 55px;
+ }
 
   /*----------------------------------------- */
 
@@ -411,7 +433,7 @@ a{
 
 .project_card {
     width: 450px;
-    background: #fff2d7;
+    background: #dbd7cf;
     border-radius: 35px;
     border: 3px solid var(--decoration-cor2);
     overflow: hidden;
@@ -421,7 +443,7 @@ a{
 
 .project_img {
     height: 220px;
-    background: #c9932d;
+    background: var(--decoration-cor2);
     border-bottom-left-radius: 90px;
     border-bottom-right-radius: 0;
     border-top-left-radius: 35px;
@@ -468,7 +490,7 @@ a{
 }
 
 .linguagens {
-    border: 2px solid #c9932d;
+    border: 2px solid var(--decoration-cor2);
     padding: 5px 15px;
     border-radius: 20px;
     font-size: 14px;
@@ -543,7 +565,7 @@ a{
   padding: 1rem 1.4rem;
   font-size: 1.6rem;
 
-  border: 2px solid var(--text-cor);
+  border: 2px solid rgb(148, 184, 210);
   border-radius: 12px;
   background-color: var(--primeira-cor);
 
