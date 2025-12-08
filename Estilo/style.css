@@ -52,6 +52,7 @@ a{
   color: var(--text-cor);
   font-weight: 400;
   font-family: "Italiana", sans-serif;
+  padding-bottom: 3.7rem;
 }  
 
 .btn {
@@ -65,9 +66,15 @@ a{
   cursor: pointer;
 
   width: fit-content;
+
+  transform: scale(1);
+  transition: .3s linear;
 }
 
-
+.btn:hover{
+  transform: scale(108%);
+  box-shadow: 12px 1px 10px 2px var(--decoration-cor2);
+}
 
 
 span{
@@ -224,6 +231,10 @@ span{
   .header_nav_button.open span:nth-child(3) {
     transform: translateY(-11px) rotate(-45deg);
   }
+
+  .title2{
+    font-size: 4rem;
+  }
 }
 
 @media (max-width: 960px){
@@ -301,13 +312,9 @@ span{
   .about_me_section{
     display: flex;
     justify-content: space-around;
+    align-items: center;
     padding-top: 10rem;
-  }
 
-  .about_me_section {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
 
 .about_me_content {
@@ -316,7 +323,7 @@ span{
 }
 .about_title{
   text-align: right;
-  margin-bottom: 2rem;
+
 }
 .about_me_paragrafo{
   font-size: var(--tamanho_28PX);
@@ -362,7 +369,9 @@ span{
 }
 
 /* ---------------------------------------- */
-  .service_title{ text-align: center; margin-bottom: 4rem; }
+  .service_title{
+     text-align: center;
+     }
 
 .services_cards {
   display: grid;
@@ -422,7 +431,6 @@ span{
 
 .project_title{
   text-align: center;
-  padding-bottom: 5rem;
 }
 .projects_cards {
     display: flex;
@@ -433,14 +441,21 @@ span{
 
 .project_card {
     width: 450px;
-    background: #dbd7cf;
+    background: #d9d9d9;
     border-radius: 35px;
     border: 3px solid var(--decoration-cor2);
     overflow: hidden;
     padding-bottom: 25px;
     box-sizing: border-box;
-}
 
+    transition: 0.3s all;
+    transform: scale(1)
+}
+.project_card:hover{
+    box-shadow: 1px 5px 23px 1px var(--decoration-cor2);
+
+    transform: scale(103%);
+}
 .project_img {
     height: 220px;
     background: var(--decoration-cor2);
@@ -580,11 +595,15 @@ span{
 
 @media (max-width: 600px){
   .contact_form{
-  padding: 1.4rem; 
+  padding: 1rem; 
   }
 
   .contact_form input, textarea {
   padding: 1rem 1.4rem;
-  font-size: .6rem;
+  font-size: 1.4rem;
 }
+.contact_names_form{
+  font-size: 1.3rem;
+}
+
 }
