@@ -360,7 +360,7 @@ span{
 @media (max-width: 990px) {
   .about_me_section {
     flex-direction: column-reverse;
-    gap: 2.5rem;
+    gap: 2.4rem;
   }
 
   .about_me_content .about_title, .about_me_paragrafo{
