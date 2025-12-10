@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Estilo/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <title>Document</title>
 </head>
 
@@ -13,7 +15,7 @@
         <nav class="header_nav">
 
             <div class="header_nav_logo">
-                <a href="#">LUCAS</a>
+                <a href="#home">LUCAS <span class="rotate"></span></a>
             </div>
 
             <div class="header_nav_links">
@@ -28,9 +30,10 @@
 
         <nav class="header_nav_mobile">
 
-            <div class="header_nav_logo_mobile">
-                <a href="#">LUCAS</a>
-            </div>
+    <div class="header_nav_logo_mobile">
+        <a href="#">LUCAS <span class="rotate_mobile"></span></a>
+    </div>
+
 
             <div class="header_nav_button">
                 <span></span>
@@ -51,7 +54,7 @@
 
     <main class="main">
 
-        <section class="hero_section" id="home">
+        <section class="hero_section" id="home" data-aos="fade">
             <div class="hero_section_content">
 
                 <h1 class="title hero_title">LUCAS <span>MAIA</span></h1>
@@ -60,13 +63,17 @@
 
                 <div class="hero_section_icons">
 
-                   <img class="hero_icons" src="https://img.icons8.com/external-tal-revivo-light-tal-revivo/FFFFFF/external-github-with-cat-logo-an-online-community-for-software-development-logo-light-tal-revivo.png" alt="external-github-with-cat-logo-an-online-community-for-software-development-logo-light-tal-revivo"/>
+                    <img class="hero_icons"
+                        src="https://img.icons8.com/external-tal-revivo-light-tal-revivo/FFFFFF/external-github-with-cat-logo-an-online-community-for-software-development-logo-light-tal-revivo.png"
+                        alt="external-github-with-cat-logo-an-online-community-for-software-development-logo-light-tal-revivo" />
 
-                    <img class="hero_icons" src="https://img.icons8.com/ios/FFFFFF/instagram-new--v1.png" alt="instagram-new--v1"/>
+                    <img class="hero_icons" src="https://img.icons8.com/ios/FFFFFF/instagram-new--v1.png"
+                        alt="instagram-new--v1" />
 
-                    <img class="hero_icons" src="https://img.icons8.com/ios/FFFFFF/facebook--v1.png" alt="facebook--v1"/>
+                    <img class="hero_icons" src="https://img.icons8.com/ios/FFFFFF/facebook--v1.png"
+                        alt="facebook--v1" />
 
-                    <img class="hero_icons" src="https://img.icons8.com/ios/FFFFFF/linkedin.png" alt="linkedin"/>
+                    <img class="hero_icons" src="https://img.icons8.com/ios/FFFFFF/linkedin.png" alt="linkedin" />
 
                 </div>
 
@@ -81,14 +88,14 @@
         </section>
 
         <section class="about_me_section" id="about">
-            <div class="about_me_img">
+            <div class="about_me_img" data-aos="fade-left">
 
                 <span class="details"></span>
                 <img class="about_me_ft" src="Imagens/Foto hero.png" alt="">
 
             </div>
 
-            <div class="about_me_content">
+            <div class="about_me_content" data-aos="fade-right">
                 <h1 class="title2 about_title">ABOUT <span>ME</span></h1>
 
                 <p class="about_me_paragrafo">Sou Lucas, um jovem criador apaixonado por tecnologia e arte. Estou
@@ -100,21 +107,21 @@
         <section class="services_section section_global" id="service">
             <h1 class="title2 service_title">SERVI<span>CES</span></h1>
             <div class="services_cards">
-                <div class="service_card">
+                <div class="service_card" data-aos="fade-left">
                     <h1 class="titulo_card_service">DESING</h1>
 
                     <p class="paragrafo_card_service">
                         Juntamos conhecimento para transforma em realidade seus projetos!
                     </p>
                 </div>
-                <div class="service_card">
+                <div class="service_card" data-aos="fade-up-left">
                     <h1 class="titulo_card_service">UI UX</h1>
 
                     <p class="paragrafo_card_service">
                         Tenho conhecimento nessesario para transforma seus deing e deixar eles responsivos.
                     </p>
                 </div>
-                <div class="service_card">
+                <div class="service_card" data-aos="fade-right">
                     <h1 class="titulo_card_service">
                         skills</h1>
 
@@ -128,7 +135,7 @@
         <section class="projects_section section_global" id="project">
             <h1 class="title2 project_title">PROJE<span>CTS</span></h1>
             <div class="projects_cards">
-                <div class="project_card">
+                <div class="project_card" data-aos="fade-up-right">
                     <div class="project_img">
                         <img src="Imagens/carros.png" alt="">
                     </div>
@@ -148,7 +155,7 @@
                         #" class="btn">VER PROJETO</a>
                     </div>
                 </div>
-                <div class="project_card">
+                <div class="project_card" data-aos="fade-up-left">
                     <div class="project_img">
                         <img src="Imagens/Cafe.png" alt="">
                     </div>
@@ -168,13 +175,13 @@
                         https://lucasmdl21.github.io/Projeto--cafe/" class="btn">VER PROJETO</a>
                     </div>
                 </div>
-                <div class="project_card">
+                <div class="project_card" data-aos="fade-right">
                     <div class="project_img">
-                        <img src="Imagens/oceano.png" alt="">
+                        <img src="Imagens/image.png" alt="">
                     </div>
 
                     <div class="project_content">
-                        <h2>OCEANO</h2>
+                        <h2>RELOJOARIA</h2>
                         <p>Projeto transformado em realidade</p>
 
                         <div class="project_linguagens">
@@ -184,8 +191,7 @@
 
                             <p class="linguagens">JavaScript</p>
                         </div>
-                        <a href="
-                        #" class="btn">VER PROJETO</a>
+                        <a href="https://lucasmdl21.github.io/RELOJOARIA/" class="btn">VER PROJETO</a>
                     </div>
                 </div>
             </div>
@@ -220,7 +226,9 @@
     <footer id="footer">
         <p>Lucas</p>
     </footer>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
+
 
 </body>
 
