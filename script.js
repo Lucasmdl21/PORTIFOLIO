@@ -14,7 +14,7 @@ links.forEach(link => {
     });
 });
 
-
+    // animacao letras para PC
 const spanRotate = document.querySelector(".rotate");
 
 const words = [
@@ -42,6 +42,7 @@ changeWord();
 setInterval(changeWord, 2000); // troca a cada 2 segundos
 
 
+    // animacao letras para MOBILE
 const spanRotateMobile = document.querySelector(".rotate_mobile");
 
 const wordsMobile = [

@@ -9,6 +9,8 @@
   border: none;
   outline: none;
   scroll-behavior: smooth;
+
+  transition: .3s linear;
 }
 :root {
   --primeira-cor: #0B0B0B;
@@ -318,6 +320,22 @@ span{
 .hero_section_icons .hero_icons:hover{
   box-shadow: 0px 0px 15px var(--decoration-cor);
   transform: scale(1.1);
+}
+
+
+@keyframes heroFadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero_section {
+    animation: heroFadeUp 1.3s ease forwards;
 }
 
 @media (max-width: 990px) {
