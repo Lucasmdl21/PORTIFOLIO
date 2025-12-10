@@ -70,9 +70,11 @@ changeWordMobile();
 setInterval(changeWordMobile, 2000);
 
 
+
+// animacao de entradas
   AOS.init({
-    duration: 1200,   // tempo da animação
-    once: true,      
+    duration: 1200,   
+    once: false,      
   });
 
 

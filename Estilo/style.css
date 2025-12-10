@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Gilda+Display&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Gilda+Display&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italiana&display=swap');
+
+/* CODIGO GERAL */
 * {
   margin: 0;
   padding: 0;
@@ -119,8 +121,7 @@ span{
     100% { opacity: 1; transform: translateY(0); }
 }
 
-
-/* ------------------------------------------ */
+  /* HEADER */
 .header{
   position: fixed;
   top: 0;
@@ -158,6 +159,8 @@ span{
 .header_nav_mobile {
   display: none;
 }
+
+/* HEADERS MEDIAS */
 @media (max-width: 1230px) {
   .header{
     padding: 1.5rem;
@@ -191,7 +194,7 @@ span{
 }
 }
 
-
+/* HEADER MOBILE */
 @media (max-width: 768px) {
   .header{
     border-radius: 0;
@@ -284,7 +287,8 @@ span{
   }
 
 }
-/* -------------------------------- */
+
+/* HERO */
 .hero_section{
   display: flex;
   justify-content: space-around;
@@ -322,7 +326,7 @@ span{
   transform: scale(1.1);
 }
 
-
+/* ANIMACAO DE ENTRADA HERO */
 @keyframes heroFadeUp {
     0% {
         opacity: 0;
@@ -338,6 +342,8 @@ span{
     animation: heroFadeUp 1.3s ease forwards;
 }
 
+
+/* HERO MEDIAS */
 @media (max-width: 990px) {
  .hero_section_imagem .hero_foto{
   display: none;
@@ -364,8 +370,8 @@ span{
   height: 55px;
  }
 
-  /*----------------------------------------- */
-
+  
+/* ABOUT */
   .about_me_section{
     display: flex;
     justify-content: space-around;
@@ -414,6 +420,7 @@ span{
   z-index: 2;                
 }
 
+/* ABOUT MEDIA */
 @media (max-width: 990px) {
   .about_me_section {
     flex-direction: column-reverse;
@@ -425,7 +432,7 @@ span{
   }
 }
 
-/* ---------------------------------------- */
+/* SERVICES */
   .service_title{
      text-align: center;
      }
@@ -468,6 +475,7 @@ span{
   line-height: 1.4;
 }
 
+/* SERVICES MEDIA */
 @media (max-width: 500px) {
   .service_card {
     padding: 2rem 1.4rem;
@@ -484,8 +492,8 @@ span{
 }
 
 
-/* ------------------------------------------- */
 
+/* PROJECTS */
 .project_title{
   text-align: center;
 }
@@ -569,6 +577,7 @@ span{
 }
 
 
+/* PROJECTS MEDIA */
 @media (max-width: 600px){
   .project_card {
       width: 100%;
@@ -578,10 +587,10 @@ span{
   }
 
   .project_img {
-      height: 150px;           /* reduz altura */
+      height: 150px;          
   }
   .project_content {
-      padding: 15px;           /* menos espaço interno */
+      padding: 15px;           
   }
 
   .project_content h2{
@@ -595,15 +604,15 @@ span{
   }
 
     .project_content .btn {
-      padding: 0.6rem 1rem;    /* botão menor */
+      padding: 0.6rem 1rem;    
       font-size: 0.9rem;
       margin-bottom: 12px;
   }
 }
 
 
-/* -------------------------------------------------------------------------- */
 
+  /* CONTACT */
 .contact_section h2 {
   text-align: center;
   padding-bottom: 5rem;
@@ -650,6 +659,7 @@ span{
   border-color: var(--decoration-cor);
 }
 
+/* CONTACT MEDIA */
 @media (max-width: 600px){
   .contact_form{
   padding: 1rem; 
@@ -665,8 +675,8 @@ span{
 
 }
 
-/* --------------------------------- */
 
+  /* FOOTER */
 #footer{
   text-align: center;
   background-color: #0B0B0B;
