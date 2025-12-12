@@ -1,0 +1,2 @@
+- [x] Update :root CSS variables with Ocean Blues palette colors
+- [ ] Verify the updated colors look good in the portfolio
