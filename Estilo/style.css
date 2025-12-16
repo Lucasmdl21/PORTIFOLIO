@@ -29,8 +29,12 @@
   --tamanho_80PX: 80px;
 }
 body{
-  background-color: var(--primeira-cor);
+  background: #0a0a0a;
+  color: var(--text-cor);
+
 }
+
+
 section{
     padding: 0 clamp(16px, 5vw, 40px);
 }
@@ -66,14 +70,56 @@ a{
   background-color: var(--decoration-cor);
   padding: 1rem 2rem;
   border-radius: 50px;
-  font-size: var(--tamanho_20PX);
-  font-weight: 700;
-  cursor: pointer;
-
   width: fit-content;
 
   transform: scale(1);
   transition: .3s linear;
+
+  position: relative;
+
+  /* VIDRO AZUL */
+  background: rgba(49, 72, 120, 0.35);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1.5px solid rgba(120, 160, 255, 0.45);
+  color: #eaf0ff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+  overflow: hidden;
+
+  transition: 0.35s ease;
+  box-shadow:
+    0 8px 25px rgba(49, 72, 120, 0.45),
+    inset 0 0 15px rgba(120, 160, 255, 0.25);
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 200%;
+  height: 200%;
+ 
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(120, 161, 255, 0.067),
+    transparent
+  );
+
+  animation: luz 4s linear infinite;
+}
+@keyframes luz {
+  0% {
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  }
+  70% {
+    transform: translateX(-50%) translateY(-50%) rotate(360deg);
+  }
 }
 
 .btn:hover{
@@ -313,15 +359,30 @@ span{
   gap: 1rem;
 }
 .hero_section_icons .hero_icons{
-  background-color: var(--decoration-cor);
-  border-radius: 10px;
-  padding: .2rem;
-  transition: linear .2s;
-  transform: scale(1);
-
   width: 60px;
   height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  /* VIDRO AZUL */
+  background: rgba(29, 72, 165, 0.35);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1.5px solid rgba(120, 160, 255, 0.45);
+
+  box-shadow:
+    0 8px 25px rgba(49, 72, 120, 0.45),
+    inset 0 0 15px rgba(120, 160, 255, 0.25);
 }
+
 .hero_section_icons .hero_icons:hover{
   box-shadow: 0px 0px 15px var(--decoration-cor);
   transform: scale(1.1);
@@ -449,22 +510,31 @@ span{
 
 .service_card {
   text-align: center;
-  border: 4px solid var(--decoration-cor);
+  background: rgba(227, 227, 227, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
   border-radius: 40px;
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+
   padding: 2.5rem 1.8rem;
   color: var(--text-cor);
-  background-color: rgb(16, 15, 15);
 
   width: 100%;
-  height: 100%;  
+  height: 100%;
 
   transform: scale(1);
-  transition: .3s linear;
+  transition: 0.3s all;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
 }
 .service_card:hover {
-  transform: scale(1.0309);
-  box-shadow: 8px 0px 20px 1px var(--decoration-cor2);
+  transform: scale(1.03);
+  box-shadow: 
+    0 12px 40px rgba(49, 72, 120, 0.4),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.12);
 }
+
 
 .service_card .titulo_card_service {
   font-size: var(--tamanho_50PX);
@@ -507,22 +577,33 @@ span{
 
 .project_card {
     width: 450px;
-    background: #191b1e;
-    color: var(--text-cor2);
+
+    /* EFEITO VIDRO */
+    background: rgba(227, 227, 227, 0.08);
+    backdrop-filter: blur(132px);
+    -webkit-backdrop-filter: blur(12px);
+
     border-radius: 35px;
-    border: 3px solid var(--decoration-cor2);
+    border: 1.5px solid rgba(255, 255, 255, 0.18);
+
+    color: var(--text-cor2);
     overflow: hidden;
     padding-bottom: 25px;
     box-sizing: border-box;
 
     transition: 0.3s all;
-    transform: scale(1)
-}
-.project_card:hover{
-    box-shadow: 1px 5px 3px 1px var(--decoration-cor2);
+    transform: scale(1);
 
-    transform: scale(103%);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
 }
+
+.project_card:hover {
+    transform: scale(1.03);
+    box-shadow: 
+        0 12px 40px rgba(49, 72, 120, 0.4),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
 .project_img {
     height: 220px;
     background: var(--decoration-cor2);
@@ -571,7 +652,10 @@ span{
 }
 
 .linguagens {
-    border: 2px solid var(--decoration-cor2);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(6px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 5px 15px;
     border-radius: 20px;
     font-size: 14px;
@@ -626,14 +710,22 @@ span{
   
   justify-content: center;
   
-  background-color: rgb(3, 7, 8);
   width: 100%;
   max-width: 500px;
   margin: auto;
   padding: 2.5rem; 
 
-  border-radius: 20px;
-  border: 2px solid var(--decoration-cor2);
+
+  /* EFEITO VIDRO */
+    background: rgba(227, 227, 227, 0.08);
+    backdrop-filter: blur(132px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 35px;
+    border: 1.5px solid rgba(255, 255, 255, 0.18);
+    color: var(--text-cor2);
+    overflow: hidden;
+    padding-bottom: 25px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
 }
 
 .contact_names_form {
