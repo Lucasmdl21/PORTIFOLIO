@@ -1,0 +1,74 @@
+
+
+  /* CONTACT */
+.contact_section h2 {
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; 
+  
+  justify-content: center;
+  
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  padding: 2.5rem; 
+
+
+  /* EFEITO VIDRO */
+    background: rgba(227, 227, 227, 0.08);
+    backdrop-filter: blur(132px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 35px;
+    border: 1.5px solid rgba(255, 255, 255, 0.18);
+    color: var(--text-cor2);
+    overflow: hidden;
+    padding-bottom: 25px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+.contact_names_form {
+  font-size: 2rem;
+  color: var(--text-cor);
+  margin-bottom: .5rem;
+}
+
+.contact_form input, textarea {
+  width: 100%;
+  padding: 1rem 1.4rem;
+  font-size: 1.6rem;
+
+  border: 2px solid rgb(148, 184, 210);
+  border-radius: 12px;
+  background-color: var(--primeira-cor);
+
+  color: var(--text-cor);
+  outline: none;
+  transition: .3s;
+}
+
+.contact_form input:focus, textarea:focus {
+  border-color: var(--decoration-cor);
+}
+
+/* CONTACT MEDIA */
+@media (max-width: 600px){
+  .contact_form{
+  padding: 1rem; 
+  }
+
+  .contact_form input, textarea {
+  padding: 1rem 1.4rem;
+  font-size: 1.4rem;
+}
+.contact_names_form{
+  font-size: 1.3rem;
+}
+
+}
+
+

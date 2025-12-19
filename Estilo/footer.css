@@ -1,0 +1,14 @@
+  /* FOOTER */
+#footer{
+  text-align: center;
+  background-color: #0B0B0B;
+  padding: 1rem;
+  margin-top: 2rem;
+  color: var(--text-cor);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  
+}
+
+#footer p{
+  font-size: 1.6rem;
+}
