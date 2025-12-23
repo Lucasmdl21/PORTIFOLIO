@@ -77,4 +77,15 @@ setInterval(changeWordMobile, 2000);
     once: false,      
   });
 
+const toggleBtns = document.querySelectorAll(".theme-toggle");
+const body = document.body;
 
+toggleBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    body.classList.toggle("light");
+
+    toggleBtns.forEach(b => {
+      b.textContent = body.classList.contains("light") ? "☀️" : "🌙";
+    });
+  });
+});
