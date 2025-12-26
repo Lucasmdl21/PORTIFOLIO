@@ -35,11 +35,11 @@
   cursor: pointer;
 
   /* VIDRO AZUL */
-  background: rgba(29, 72, 165, 0.35);
+  background: var(--vidro-cor);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 
-  border: 1.5px solid rgba(120, 160, 255, 0.45);
+  border: 1.5px solid var(--vidro-cor2);
 
   box-shadow:
     0 8px 25px rgba(49, 72, 120, 0.45),
